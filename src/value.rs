@@ -155,7 +155,7 @@ impl Value {
     }
 
     /// Set the contents of a G_TYPE_DOUBLE GValue to v_double .
-    fn set_double(&mut self, v_double: f64) {
+    pub fn set_double(&mut self, v_double: f64) {
         unsafe { gobject_ffi::g_value_set_double(&mut self.inner, v_double) }
     }
 
